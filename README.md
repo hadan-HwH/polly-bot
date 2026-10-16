@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Portfolio-Excerpt-64748b?style=flat-square" alt="Portfolio excerpt">
 </p>
 
-<p align="center"><sub>개인 프로젝트 · 2026.03 · 포트폴리오용 발췌본</sub></p>
+<p align="center"><sub>개인 프로젝트 · 포트폴리오용 발췌본</sub></p>
 
 ---
 
@@ -65,15 +65,10 @@ Polymarket의 다중 선택 이벤트는 후보마다 YES/NO 마켓이 따로 �
 
 NegRisk 어댑터에서 NO 1개는 나머지 k − 1개 결과의 YES와 같습니다. 그래서 NO를 한 세트 사서 변환하면 완전한 YES 세트가 k − 1개 생기고, 비교 기준이 1이 아니라 **k − 1**이 됩니다. 이 원리로 YES 합이 1보다 작은 경우와 NO 합이 k − 1보다 작은 경우를 함께 탐지합니다.
 
-```mermaid
-flowchart LR
-    A["Polymarket<br/>이벤트 · 실시간 호가"] --> B["스캐너<br/>이벤트 단위로 묶기"]
-    B --> C["탐지기<br/>차익 조건 · 안전마진"]
-    C --> D["추천<br/>점수 · 순위"]
-    C -. 탈락 사유 .-> E["Near-miss 기록"]
-    D --> F["API · 대시보드"]
-    E --> F
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">
+  <img src="assets/flow-light.svg" alt="Polly-Bot 처리 흐름: Polymarket → 스캐너 → 탐지기 → 추천 → API · 대시보드" width="100%">
+</picture>
 
 - **기존 코드 확장:** karb 코드는 그대로 두고 이벤트 버스로 NegRisk 경로를 추가해, 기존 전략과 병렬로 동작합니다.
 - **수량 결정:** 모든 결과를 같은 수량만큼 사야 하므로, 가장 얕은 오더북 깊이의 일부만 사용합니다.
@@ -113,7 +108,7 @@ pollybot dashboard    # API 서버 · 대시보드
 
 ## 현재 상태와 한계
 
-이 저장소는 **2026년 3월 22일부터 3월 30일까지 개발한 개인 프로젝트의 포트폴리오용 발췌본**입니다.
+이 저장소는 **개인 프로젝트의 포트폴리오용 발췌본**입니다.
 
 | 항목 | 현재 상태 |
 | --- | --- |
