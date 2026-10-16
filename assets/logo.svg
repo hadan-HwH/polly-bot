@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Polly-Bot">
+  <rect width="120" height="120" rx="26" fill="#4338CA"/>
+  <line x1="18" y1="34" x2="102" y2="34" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <rect x="22" y="50" width="15" height="44" rx="3" fill="#FFFFFF"/>
+  <rect x="42" y="42" width="15" height="52" rx="3" fill="#FFFFFF" fill-opacity="0.88"/>
+  <rect x="62" y="60" width="15" height="34" rx="3" fill="#FFFFFF" fill-opacity="0.76"/>
+  <rect x="82" y="70" width="15" height="24" rx="3" fill="#FFFFFF" fill-opacity="0.64"/>
+  <rect x="22" y="99" width="75" height="4" rx="2" fill="#A5B4FC"/>
+</svg>
