@@ -89,7 +89,43 @@ NegRisk 어댑터에서 NO 1개는 나머지 k − 1개 결과의 YES와 같습�
 
 수식 유도와 예외 처리는 [전략 문서](docs/negrisk-strategy.md)에서 확인할 수 있습니다.
 
+## 아키텍처
+
+### 구성
+
+| 구분 | 구성 요소 | 역할 |
+| --- | --- | --- |
+| **백엔드** | 스캐너 | 이벤트 수집, 결과별 실시간 호가 구독 |
+| | 탐지기 | 차익 조건 · 수량 · 안전마진 계산 |
+| | 추천 | 6가지 요소 점수와 순위 |
+| | 이벤트 버스 | 기존 전략과 NegRisk 경로를 분리해 병렬 실행 |
+| **프론트엔드** | 화면 | 기회 목록 · 이벤트 상세 · 마켓 · 포트폴리오 · 설정 |
+| | 공통 UI | UI 킷 의존을 감싼 래핑 레이어 |
+| | 통신 | REST 조회와 실시간 호가 연결 |
+
+### 저장소 구조
+
+```
+polly-bot/
+├── src/karb/           # NegRisk 모듈 (karb 확장)
+│   ├── scanner/        # 이벤트 수집 · 실시간 호가
+│   ├── analyzer/       # 차익 탐지 · 점수
+│   ├── events/         # 이벤트 버스
+│   └── api/            # 데이터 모델
+├── frontend/src/       # React 대시보드
+│   ├── pages/          # 화면
+│   ├── components/     # 공통 UI · 변환 시뮬레이터
+│   └── lib/            # REST · WebSocket 클라이언트
+├── tests/              # 백엔드 테스트
+└── docs/               # 전략 · 설계 문서
+```
+
 ## 실행 및 확인
+
+<details>
+<summary><b>실행 방법 보기</b></summary>
+
+<br>
 
 Node.js 22 환경이 필요합니다. 프론트엔드는 이 저장소만으로 테스트와 빌드가 가능합니다.
 
@@ -111,6 +147,8 @@ npm run build
 pollybot negrisk      # NegRisk 스캐너
 pollybot dashboard    # API 서버 · 대시보드
 ```
+
+</details>
 
 ## 프로젝트의 출발점
 
