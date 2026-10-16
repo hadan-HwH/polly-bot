@@ -1,0 +1,7 @@
+/*
+ * 원본 프로젝트는 유료 UI 킷(Domiex)의 Tailwind 플러그인·테마 CSS를 이 파일에서 불러옵니다.
+ * 킷 라이선스상 해당 소스는 공개 저장소에 포함하지 않았습니다 — 빌드는 되지만 원본 스타일은 적용되지 않습니다.
+ */
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-mode=dark], [data-mode=dark] *));

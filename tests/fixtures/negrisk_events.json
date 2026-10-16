@@ -1,0 +1,53 @@
+[
+  {
+    "event_id": "evt_election_2028",
+    "title": "2028 Presidential Election",
+    "slug": "2028-presidential-election",
+    "neg_risk": true,
+    "markets": [
+      {
+        "id": "m1",
+        "condition_id": "cond_m1",
+        "question": "Candidate A wins",
+        "slug": "candidate-a-wins",
+        "yes_token_id": "yes_a",
+        "no_token_id": "no_a",
+        "yes_price": "0.45",
+        "no_price": "0.55"
+      },
+      {
+        "id": "m2",
+        "condition_id": "cond_m2",
+        "question": "Candidate B wins",
+        "slug": "candidate-b-wins",
+        "yes_token_id": "yes_b",
+        "no_token_id": "no_b",
+        "yes_price": "0.30",
+        "no_price": "0.70"
+      },
+      {
+        "id": "m3",
+        "condition_id": "cond_m3",
+        "question": "Other candidate wins",
+        "slug": "other-candidate-wins",
+        "yes_token_id": "yes_c",
+        "no_token_id": "no_c",
+        "yes_price": "0.15",
+        "no_price": "0.85"
+      }
+    ]
+  },
+  {
+    "event_id": "evt_five_outcome",
+    "title": "5-Outcome Event",
+    "slug": "five-outcome",
+    "neg_risk": true,
+    "markets": [
+      {"id": "m10", "condition_id": "c10", "question": "A", "slug": "a", "yes_token_id": "y10", "no_token_id": "n10", "yes_price": "0.25", "no_price": "0.75"},
+      {"id": "m11", "condition_id": "c11", "question": "B", "slug": "b", "yes_token_id": "y11", "no_token_id": "n11", "yes_price": "0.20", "no_price": "0.80"},
+      {"id": "m12", "condition_id": "c12", "question": "C", "slug": "c", "yes_token_id": "y12", "no_token_id": "n12", "yes_price": "0.20", "no_price": "0.80"},
+      {"id": "m13", "condition_id": "c13", "question": "D", "slug": "d", "yes_token_id": "y13", "no_token_id": "n13", "yes_price": "0.15", "no_price": "0.85"},
+      {"id": "m14", "condition_id": "c14", "question": "E", "slug": "e", "yes_token_id": "y14", "no_token_id": "n14", "yes_price": "0.10", "no_price": "0.90"}
+    ]
+  }
+]
